@@ -2,7 +2,7 @@
 
 -Elaborado con JavaFX
 
--Lenguajes utilizados: Java,XML,SQL,Css
+-Lenguajes utilizados: Java,XML,SQL,CSS
 
 -Java 17 JDK FX https://www.azul.com/downloads/?architecture=x86-64-bit&package=jdk-fx#zulu
 
