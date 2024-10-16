@@ -1,0 +1,40 @@
+.background {
+    -fx-background-color: lightblue; /* Color para prueba */
+    -fx-background-image: url("images/mainbg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.settings-menu {
+    -fx-padding: 30;
+    -fx-alignment: center;
+}
+
+.settings-button {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-pref-width: 300;
+    -fx-cursor: hand;
+    -fx-transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor por encima */
+.settings-button:hover {
+    -fx-background-color: #555;  /* Cambia el color de fondo cuando se pasa el cursor */
+}
+
+/* Efecto cuando el botón está seleccionado */
+.settings-button:focused {
+    -fx-background-color: #777;  /* Cambia el color de fondo cuando el botón está seleccionado */
+    -fx-border-color: #fff;      /* Añade un borde blanco al estar seleccionado */
+    -fx-border-width: 2px;
+}
+
+.settings-button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;  /* El cursor vuelve a ser normal cuando el botón está deshabilitado */
+}

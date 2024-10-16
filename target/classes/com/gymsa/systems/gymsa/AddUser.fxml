@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.*?>
+
+<Pane xmlns:fx="http://javafx.com/fxml" fx:controller="com.gymsa.systems.gymsa.AddUserController" stylesheets="@addUserStyle.css" prefWidth="400" prefHeight="300">
+    <VBox alignment="CENTER" spacing="10" layoutX="10" layoutY="10" prefWidth="400" prefHeight="300">
+        <Label text="Agregar Usuario" styleClass="title-label"/>
+
+        <TextField fx:id="usernameField" promptText="Nombre de usuario" styleClass="text-field" maxWidth="300"/> <!-- Establecido maxWidth -->
+        <PasswordField fx:id="passwordField" promptText="Contraseña" styleClass="text-field" maxWidth="300"/> <!-- Establecido maxWidth -->
+
+        <CheckBox fx:id="adminCheckBox" text="Es administrador" styleClass="check-box"/>
+
+        <Button fx:id="addButton" text="Agregar Usuario" onAction="#handleAddUser" styleClass="action-button"/>
+        <Button fx:id="cancelButton" text="Cancelar" onAction="#handleCancel" styleClass="cancel-button"/>
+    </VBox>
+</Pane>
+

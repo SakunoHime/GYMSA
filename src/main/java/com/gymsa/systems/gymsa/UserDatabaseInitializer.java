@@ -7,8 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-//Crea la base de datos para usuarios (tablas) e inserta un archivo que almacena la información de manera local.
-
+// Crea la base de datos para usuarios (tablas) e inserta un archivo que almacena la información de manera local.
 public class UserDatabaseInitializer {
     private static final String DB_URL = "jdbc:sqlite:mydatabase.db";
     private static final String USER_TABLE_CREATE = "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, password TEXT NOT NULL, is_admin BOOLEAN NOT NULL)";

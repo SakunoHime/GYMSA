@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.gymsa.systems.gymsa.CustomAlertController">
+    <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #333; -fx-padding: 20;">
+        <Label fx:id="messageLabel" textFill="white" />
+        <HBox alignment="CENTER">
+            <Button text="Aceptar" onAction="#handleClose" style="-fx-background-color: #f00; -fx-text-fill: white;"/>
+        </HBox>
+    </VBox>
+</StackPane>

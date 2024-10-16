@@ -1,15 +1,26 @@
 package com.gymsa.systems.gymsa;
 
 public class Usuario {
+    private int id; // Nuevo campo para el ID del usuario
     private String nombre;
     private String password;
-    private boolean esAdministrador;
+    private boolean isAdmin;
 
-    // Constructor
-    public Usuario(String nombre, String password, boolean esAdministrador) {
+    // Constructor actualizado
+    public Usuario(int id, String nombre, String password, boolean isAdmin) {
+        this.id = id;
         this.nombre = nombre;
         this.password = password;
-        this.esAdministrador = esAdministrador;
+        this.isAdmin = isAdmin;
+    }
+
+    // Getter y setter para el ID
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -28,19 +39,20 @@ public class Usuario {
         this.password = password;
     }
 
-    public boolean isEsAdministrador() {
-        return esAdministrador;
+    public boolean isAdmin() {
+        return isAdmin;
     }
 
     public void setEsAdministrador(boolean esAdministrador) {
-        this.esAdministrador = esAdministrador;
+        this.isAdmin = esAdministrador;
     }
 
     @Override
     public String toString() {
         return "Usuario{" +
-                "nombre='" + nombre + '\'' +
-                ", esAdministrador=" + esAdministrador +
+                "id=" + id + // Incluir el ID en la representación de cadena
+                ", nombre='" + nombre + '\'' +
+                ", esAdministrador=" + isAdmin +
                 '}';
     }
 }

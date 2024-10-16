@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" styleClass="reset-confirmation-pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gymsa.systems.gymsa.ResetConfirmationController"  stylesheets="@ResetStyle.css">
+    <children>
+        <Label layoutX="60.0" layoutY="50.0" text="Advertencia: ¡Esta acción borrará todos los datos!"/>
+        <Label layoutX="60.0" layoutY="100.0" text="Escribe tu contraseña de administrador:"/>
+        <PasswordField fx:id="adminPasswordField" layoutX="60.0" layoutY="130.0" prefWidth="380.0"/>
+
+        <Label layoutX="60.0" layoutY="180.0" text="Escribe la palabra 'CONFIRMAR' para continuar:"/>
+        <TextField fx:id="confirmationField" layoutX="60.0" layoutY="210.0" prefWidth="380.0"/>
+
+        <Button fx:id="resetButton" layoutX="60.0" layoutY="270.0" prefWidth="150.0" text="Reiniciar" onAction="#handleReset"/>
+        <Button fx:id="cancelButton" layoutX="290.0" layoutY="270.0" prefWidth="150.0" text="Cancelar" onAction="#handleCancel"/>
+    </children>
+</AnchorPane>

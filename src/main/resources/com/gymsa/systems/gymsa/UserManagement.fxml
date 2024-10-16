@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gymsa.systems.gymsa.UserManagementController"
+            prefWidth="500" prefHeight="600"
+            stylesheets="@userManagementStyle.css">
+
+    <VBox spacing="20" layoutX="20" layoutY="20" prefWidth="460" prefHeight="560">
+        <Label text="Gestión de Usuarios" styleClass="label-style"/>
+
+        <!-- Tabla ocupando gran parte del ancho del espacio -->
+        <TableView fx:id="userTableView" styleClass="user-table" prefWidth="740" prefHeight="400">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="100" resizable="false"/>
+                <TableColumn fx:id="nameColumn" text="Nombre" prefWidth="250" resizable="false"/>
+                <TableColumn fx:id="isAdminColumn" text="Administrador" prefWidth="106" resizable="false"/>
+            </columns>
+        </TableView>
+
+        <!-- Contenedor para botones en fila centrados -->
+        <HBox spacing="10" alignment="CENTER" prefWidth="740">
+            <Button fx:id="addUserButton" text="Agregar" onAction="#handleAddUser" styleClass="action-button"/>
+            <Button fx:id="editUserButton" text="Modificar" onAction="#handleEditUser" styleClass="action-button"/>
+            <Button fx:id="deleteUserButton" text="Eliminar" onAction="#handleDeleteUser" styleClass="action-button"/>
+            <Button fx:id="exitButton" text="Salir" onAction="#handleExit" styleClass="action-button"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

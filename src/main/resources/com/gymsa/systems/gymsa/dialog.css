@@ -1,0 +1,14 @@
+.alert {
+    -fx-background-color: #333333; /* Fondo oscuro */
+    -fx-text-fill: white; /* Texto blanco */
+    -fx-font-size: 14px; /* Tamaño de fuente */
+}
+
+.alert .header {
+    -fx-background-color: #ff0000; /* Fondo rojo para el encabezado */
+    -fx-text-fill: white; /* Texto blanco en el encabezado */
+}
+
+.alert .content {
+    -fx-background-color: #444444; /* Fondo un poco más claro */
+}

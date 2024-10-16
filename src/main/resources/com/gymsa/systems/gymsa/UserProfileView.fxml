@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gymsa.systems.gymsa.UserProfileController"
+            prefWidth="400" prefHeight="300"
+            stylesheets="@userProfileStyles.css">
+
+    <VBox alignment="CENTER" spacing="10" layoutX="50" layoutY="30" fillWidth="true">
+        <!-- Etiqueta de nombre de usuario -->
+        <Label text="Nombre de usuario" styleClass="label-style" />
+        <TextField fx:id="userNameField" prefWidth="250" />
+
+        <!-- Etiqueta de contraseña actual -->
+        <Label text="Contraseña actual" styleClass="label-style" />
+        <PasswordField fx:id="currentPasswordField" prefWidth="250" />
+
+        <!-- Etiqueta de nueva contraseña -->
+        <Label text="Nueva contraseña" styleClass="label-style" />
+        <PasswordField fx:id="newPasswordField" prefWidth="250" />
+
+        <!-- Botones -->
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="saveChangesButton" text="Guardar cambios" onAction="#handleSaveChanges" styleClass="button-save" />
+            <Button fx:id="exitButton" text="Salir" onAction="#handleExit" styleClass="button-exit" />
+        </HBox>
+    </VBox>
+
+</AnchorPane>

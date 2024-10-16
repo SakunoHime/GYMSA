@@ -1,0 +1,22 @@
+/* Fondo degradado */
+.root {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #990000, #2f2f2f);
+}
+
+/* Estilo de etiquetas */
+.label-style {
+    -fx-text-fill: white;  /* Color del texto */
+    -fx-font-size: 14px;   /* Tamaño de fuente */
+}
+
+/* Estilo del botón de cerrar */
+.about-button {
+    -fx-background-color: #444;  /* Color de fondo */
+    -fx-text-fill: white;         /* Color del texto */
+    -fx-font-size: 14px;          /* Tamaño de fuente */
+    -fx-padding: 10px 20px;       /* Espaciado interno */
+}
+
+.about-button:hover {
+    -fx-background-color: #666;   /* Color al pasar el mouse */
+}

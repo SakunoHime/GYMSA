@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gymsa.systems.gymsa.HomeViewController"
+            prefWidth="1000" prefHeight="700"
+            stylesheets="@homeStyle.css"
+            styleClass="background">
+
+
+
+    <!-- Logo del gimnasio -->
+    <ImageView fx:id="gymLogo" fitWidth="400" fitHeight="400" layoutX="550" layoutY="-50">
+        <image>
+            <Image url="@images/logomain.png" />
+        </image>
+    </ImageView>
+
+    <!-- Label de bienvenida -->
+    <Label fx:id="welcomeLabel" text="¡Bienvenido, Nombre de usuario!" layoutX="450" layoutY="200" styleClass="welcome-label"  />
+
+    <!-- Label de fecha y hora -->
+    <Label fx:id="dateTimeLabel" layoutX="500" layoutY="250" styleClass="datetime-label" />
+</AnchorPane>

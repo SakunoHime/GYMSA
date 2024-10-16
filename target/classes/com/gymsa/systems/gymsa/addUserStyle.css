@@ -1,0 +1,57 @@
+/* addUserStyle.css */
+
+/* Fondo de la ventana */
+.root {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #990000, #2f2f2f); /* Fondo degradado */
+}
+
+/* Estilo para la etiqueta de título */
+.title-label {
+    font-size: 24px;
+    font-weight: bold;
+    -fx-text-fill: white; /* Cambia el color del texto a blanco */
+}
+
+/* Estilo para las cajas de texto */
+.text-field {
+    -fx-background-color: black; /* Color de fondo negro */
+    -fx-text-fill: white; /* Color del texto blanco */
+    -fx-border-color: white; /* Contorno blanco */
+    -fx-border-width: 1; /* Grosor del borde */
+    -fx-padding: 5; /* Espaciado interno */
+}
+
+/* Estilo para el botón de agregar */
+.action-button {
+    -fx-background-color: #ff0000; /* Color rojo para el botón de agregar */
+    -fx-text-fill: white; /* Color del texto */
+    -fx-padding: 10px 20px; /* Espaciado interno */
+    -fx-font-size: 14px; /* Tamaño de fuente */
+    -fx-background-radius: 5; /* Esquinas redondeadas */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 5, 0, 0, 1); /* Sombra para efecto */
+}
+
+/* Efecto al pasar el cursor sobre el botón de agregar */
+.action-button:hover {
+    -fx-background-color: #cc0000; /* Color rojo más oscuro al pasar el mouse */
+}
+
+/* Estilo para el botón de cancelar */
+.cancel-button {
+    -fx-background-color: #777; /* Color de fondo para el botón de cancelar */
+    -fx-text-fill: white; /* Color del texto */
+    -fx-padding: 10px 20px; /* Espaciado interno */
+    -fx-font-size: 14px; /* Tamaño de fuente */
+    -fx-background-radius: 5; /* Esquinas redondeadas */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 5, 0, 0, 1); /* Sombra para efecto */
+}
+
+/* Efecto al pasar el cursor sobre el botón de cancelar */
+.cancel-button:hover {
+    -fx-background-color: #555; /* Color más oscuro al pasar el mouse */
+}
+
+/* Color del texto del CheckBox */
+.check-box {
+    -fx-text-fill: white; /* Cambia el color del texto a blanco */
+}

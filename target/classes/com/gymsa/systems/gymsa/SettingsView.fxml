@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gymsa.systems.gymsa.SettingsViewController"
+            prefWidth="1000" prefHeight="700"
+            stylesheets="@settingsViewStyle.css"
+            styleClass="background">
+
+    <!-- Contenedor principal de ajustes -->
+    <VBox layoutX="490" layoutY="90" spacing="35" styleClass="settings-menu">
+
+        <!-- Opción Perfil de usuario -->
+        <Button fx:id="profileButton" text="Perfil de usuario" styleClass="settings-button" onAction="#handleProfile"/>
+
+        <!-- Opción Gestionar usuarios (solo para administradores) -->
+        <Button fx:id="manageUsersButton" text="Gestionar usuarios" styleClass="settings-button" onAction="#handleManageUsers" disable="true"/>
+
+        <!-- Opción Reiniciar configuración (solo para administradores) -->
+        <Button fx:id="resetConfigButton" text="Reiniciar configuración" styleClass="settings-button" onAction="#handleResetConfig" disable="true"/>
+
+        <!-- Opción Acerca de -->
+        <Button fx:id="aboutButton" text="Acerca de" styleClass="settings-button" onAction="#handleAbout"/>
+    </VBox>
+</AnchorPane>
