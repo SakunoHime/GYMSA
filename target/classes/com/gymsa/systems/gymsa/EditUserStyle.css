@@ -1,0 +1,15 @@
+.custom-red-button {
+    -fx-background-color: #d9534f;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1;
+}
+
+.custom-red-button:hover {
+    -fx-background-color: #c9302c;
+}
+
+.custom-red-button:pressed {
+    -fx-background-color: #ac2925;
+}
