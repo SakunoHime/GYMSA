@@ -69,6 +69,11 @@ public class UserManagementController {
         userTableView.setItems(userList); // Asigna la lista a la tabla
     }
 
+    private boolean isLoggedInUserAdmin() {
+        int loggedInUserId = getLoggedInUserId();
+        return UserDAO.isUserAdmin(loggedInUserId); // Método que comprueba si el usuario es admin en UserDAO
+    }
+
     private void loadUserData() {
         try (Connection conn = DriverManager.getConnection(DB_URL)) {
             if (conn != null) {
@@ -115,9 +120,55 @@ public class UserManagementController {
 
     @FXML
     private void handleEditUser() {
-        // Lógica para modificar usuario
-        // Implementar según sea necesario
+        Usuario selectedUser = userTableView.getSelectionModel().getSelectedItem();
+        int loggedInUserId = getLoggedInUserId();
+        boolean isLoggedInAdmin = isLoggedInUserAdmin();
+
+        // Verificar si hay un usuario seleccionado
+        if (selectedUser == null) {
+            showCustomAlert("Por favor, selecciona un usuario para modificar.");
+            return;
+        }
+
+        // Verificar si el usuario logueado es administrador
+        if (!isLoggedInAdmin) {
+            showCustomAlert("No tienes permisos para modificar usuarios.");
+            return;
+        }
+
+        // No permitir que un usuario se modifique a sí mismo desde este menú
+        if (selectedUser.getId() == loggedInUserId) {
+            showCustomAlert("No puedes modificarte a ti mismo desde aquí. Usa la opción 'Perfil de Usuario' para realizar cambios.");
+            return;
+        }
+
+        // Solo el administrador principal (ID 1) puede modificar otros administradores
+        if (selectedUser.isAdmin() && loggedInUserId != 1) {
+            showCustomAlert("Solo el administrador principal puede modificar a otros administradores.");
+            return;
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("EditUser.fxml"));
+            Pane pane = loader.load();
+
+            EditUserController controller = loader.getController();
+            controller.initialize(selectedUser, loggedInUserId);
+
+            Stage stage = new Stage();
+            stage.setTitle("Modificar Usuario");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(pane));
+            stage.setResizable(false);
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.showAndWait();
+
+            userTableView.refresh(); // Actualizar la tabla después de modificar
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 
     @FXML
     private void handleDeleteUser() {

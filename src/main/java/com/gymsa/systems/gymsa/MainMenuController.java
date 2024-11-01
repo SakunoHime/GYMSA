@@ -50,8 +50,18 @@ public class MainMenuController {
 
     @FXML
     public void showStudents() {
-        loadView("StudentsView.fxml");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("StudentsView.fxml"));
+            Parent studentsView = loader.load();
+
+            StudentsViewController studentsViewController = loader.getController();
+
+            contentArea.getChildren().setAll(studentsView);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 
     @FXML
     public void showPayments() {

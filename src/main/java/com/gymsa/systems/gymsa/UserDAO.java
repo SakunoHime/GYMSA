@@ -173,6 +173,25 @@ public class UserDAO {
         return false; // Retornar false si hay un error o si el usuario no existe
     }
 
+    public static boolean isUserAdmin(int userId) {
+        // Consulta la base de datos para verificar si el usuario con el ID dado es administrador
+        String query = "SELECT is_admin FROM users WHERE id = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setInt(1, userId);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return rs.getBoolean("is_admin");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
 
 
 

@@ -10,6 +10,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.File;
 import java.io.IOException;
 
 public class ResetConfirmationController {
@@ -21,6 +22,7 @@ public class ResetConfirmationController {
 
     private UserDAO userDAO = new UserDAO(); // Usar el UserDAO para verificar el admin
     private static final int ADMIN_ID = 1;
+    private static final String DATABASE_PATH = "mydatabase.db"; // Ruta del archivo de la base de datos
 
     @FXML
     private void handleReset() {
@@ -62,8 +64,26 @@ public class ResetConfirmationController {
     private void resetApplicationData() {
         showCustomAlert("La aplicación se reiniciará ahora para aplicar los cambios.");
 
+        // Elimina el archivo de la base de datos
+        deleteDatabaseFile();
+
         // Cerrar la aplicación después de reiniciar los datos
         System.exit(0); // Esto simula el cierre de la aplicación para reiniciar
+    }
+
+    private void deleteDatabaseFile() {
+        File databaseFile = new File(DATABASE_PATH);
+
+        // Verificar si el archivo existe
+        if (databaseFile.exists()) {
+            if (databaseFile.delete()) {
+                showCustomAlert("La base de datos ha sido eliminada exitosamente.");
+            } else {
+                showCustomAlert("No se pudo eliminar la base de datos. Inténtalo de nuevo.");
+            }
+        } else {
+            showCustomAlert("El archivo de la base de datos no existe.");
+        }
     }
 
     // Método para mostrar alertas personalizadas
