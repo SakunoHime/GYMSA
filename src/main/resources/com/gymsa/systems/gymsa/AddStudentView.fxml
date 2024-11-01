@@ -1,0 +1,48 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.gymsa.systems.gymsa.AddStudentController" stylesheets="@AddStudentStyle.css" prefWidth="400" prefHeight="650">
+    <style>
+        -fx-background-color: #2b2b2b;
+        -fx-border-color: #444;
+        -fx-border-radius: 8;
+    </style>
+
+    <Label text="Agregar Alumno" layoutX="140" layoutY="20" style="-fx-font-size: 18px; -fx-text-fill: white;" />
+
+    <Label text="ID:" layoutX="50" layoutY="80" style="-fx-text-fill: white;" />
+    <TextField fx:id="idField" layoutX="170" layoutY="75" prefWidth="180" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-border-color: white;" />
+
+    <Label text="Nombres:" layoutX="50" layoutY="130" style="-fx-text-fill: white;" />
+    <TextField fx:id="nombresField" layoutX="170" layoutY="125" prefWidth="180" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-border-color: white;" />
+
+    <Label text="Apellido Paterno:" layoutX="50" layoutY="180" style="-fx-text-fill: white;" />
+    <TextField fx:id="apellidoPaternoField" layoutX="170" layoutY="175" prefWidth="180" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-border-color: white;" />
+
+    <Label text="Apellido Materno:" layoutX="50" layoutY="230" style="-fx-text-fill: white;" />
+    <TextField fx:id="apellidoMaternoField" layoutX="170" layoutY="225" prefWidth="180" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-border-color: white;" />
+
+    <Label text="Teléfono:" layoutX="50" layoutY="280" style="-fx-text-fill: white;" />
+    <TextField fx:id="telefonoField" layoutX="170" layoutY="275" prefWidth="180" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-border-color: white;" />
+
+    <Label text="Sexo:" layoutX="50" layoutY="330" style="-fx-text-fill: white;" />
+    <ComboBox fx:id="sexoComboBox" layoutX="170" layoutY="325" prefWidth="180" styleClass="combo-box" />
+
+    <Label text="Edad:" layoutX="50" layoutY="380" style="-fx-text-fill: white;" />
+    <TextField fx:id="edadField" layoutX="170" layoutY="375" prefWidth="180" style="-fx-background-color: #000000; -fx-border-color: white;" />
+
+    <!-- Nuevos campos de Estatura y Peso -->
+    <Label text="Estatura (m):" layoutX="50" layoutY="430" style="-fx-text-fill: white;" />
+    <TextField fx:id="estaturaField" layoutX="170" layoutY="425" prefWidth="180" style="-fx-background-color: #000000; -fx-border-color: white;" />
+
+    <Label text="Peso (kg):" layoutX="50" layoutY="480" style="-fx-text-fill: white;" />
+    <TextField fx:id="pesoField" layoutX="170" layoutY="475" prefWidth="180" style="-fx-background-color: #000000; -fx-border-color: white;" />
+
+    <Label text="Horario:" layoutX="50" layoutY="530" style="-fx-text-fill: white;" />
+    <ComboBox fx:id="horarioComboBox" layoutX="170" layoutY="525" prefWidth="180" styleClass="combo-box" />
+
+    <Button fx:id="addButton" text="Agregar" layoutX="90" layoutY="570" prefWidth="100" styleClass="add-button" onAction="#handleAddStudent" />
+    <Button fx:id="cancelButton" text="Cancelar" layoutX="210" layoutY="570" prefWidth="100" styleClass="add-button" onAction="#handleCancel"/>
+</AnchorPane>

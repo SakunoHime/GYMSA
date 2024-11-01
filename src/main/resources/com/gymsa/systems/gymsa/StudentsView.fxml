@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+
+<?import java.net.URL?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.gymsa.systems.gymsa.StudentsViewController" styleClass="background">
+    <stylesheets>
+        <URL value="@StudentsStyle.css" /> <!-- Asegúrate de cambiar la ruta a la ubicación de tu archivo CSS -->
+    </stylesheets>
+
+    <top>
+        <VBox spacing="10.0" styleClass="top-container">
+            <Label text="Lista de Alumnos" styleClass="title-label" />
+            <ComboBox fx:id="horarioComboBox" onAction="#handleHorarioSelection" styleClass="horario-combo" />
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="studentsTableView" styleClass="students-table">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Nombres" prefWidth="164" resizable="false"/>
+                <TableColumn fx:id="apPaternoColumn" text="Apellido Paterno" prefWidth="150" resizable="false"/>
+                <TableColumn fx:id="apMaternoColumn" text="Apellido Materno" prefWidth="150" resizable="false"/>
+                <TableColumn fx:id="telefonoColumn" text="Teléfono" prefWidth="106" resizable="false"/>
+                <TableColumn fx:id="sexoColumn" text="Sexo" prefWidth="106" resizable="false"/>
+                <TableColumn fx:id="edadColumn" text="Edad" prefWidth="90" resizable="false"/>
+                <TableColumn fx:id="estaturaColumn" text="Estatura" prefWidth="90" resizable="false"/>
+                <TableColumn fx:id="pesoColumn" text="Peso" prefWidth="90" resizable="false"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10.0" styleClass="button-container" alignment="CENTER">
+            <Button text="Agregar" onAction="#handleAddStudent" styleClass="action-button" />
+            <Button text="Modificar" onAction="#handleEditStudent" styleClass="action-button" />
+            <Button text="Eliminar" onAction="#handleDeleteStudent" styleClass="action-button" />
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,83 @@
+/* Fondo de la ventana */
+.background {
+    -fx-background-color: lightblue; /* Color para prueba */
+    -fx-background-image: url("images/mainbg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+/* Estilo de la tabla de estudiantes */
+.students-table {
+    -fx-background-color: rgba(50, 50, 50, 0.8); /* Fondo oscuro y ligeramente transparente */
+    -fx-border-color: white; /* Borde de la tabla en blanco */
+    -fx-border-width: 1; /* Ancho del borde */
+}
+
+/* Estilo de etiquetas */
+.label-style {
+    -fx-text-fill: white;  /* Color del texto */
+    -fx-font-size: 18px;   /* Tamaño de fuente */
+}
+
+/* Estilo de los encabezados de la tabla */
+.students-table .table-header {
+    -fx-background-color: rgba(30, 30, 30, 1); /* Fondo de la cabecera */
+    -fx-text-fill: #A9A9A9; /* Color gris oscuro para el texto de la cabecera */
+    -fx-font-weight: bold; /* Negrita en la cabecera */
+}
+
+/* Estilo de las columnas */
+.students-table .table-column-header {
+    -fx-background-color: rgba(30, 30, 30, 1); /* Fondo oscuro de las cabeceras de columna */
+    -fx-text-fill: #A9A9A9; /* Color gris oscuro para el texto de las cabeceras de columna */
+}
+
+/* Estilo de las filas de la tabla */
+.students-table .table-row-cell {
+    -fx-background-color: transparent; /* Fondo transparente para filas */
+}
+
+/* Asegurar que el texto de las celdas sea blanco siempre */
+.students-table .table-row-cell .text {
+    -fx-fill: white; /* Asegura que el texto en las celdas sea blanco */
+}
+
+/* Color del texto en las filas no seleccionadas */
+.students-table .table-row-cell {
+    -fx-text-fill: white; /* Color de texto blanco para filas no seleccionadas */
+}
+
+/* Estilo al pasar el mouse sobre las filas */
+.students-table .table-row-cell:hover {
+    -fx-background-color: rgba(80, 80, 80, 0.6); /* Color al pasar el mouse */
+}
+
+.students-table .table-cell {
+    -fx-alignment: CENTER; /* Centra el contenido */
+}
+
+.students-table .table-column {
+    -fx-alignment: CENTER; /* Centra el contenido en la columna */
+}
+
+/* Estilo de botones de acción */
+.action-button {
+    -fx-background-color: #444;  /* Color de fondo */
+    -fx-text-fill: white;         /* Color del texto */
+    -fx-font-size: 14px;          /* Tamaño de fuente */
+    -fx-padding: 10px 20px;       /* Espaciado interno */
+}
+
+/* Color al pasar el mouse por los botones */
+.action-button:hover {
+    -fx-background-color: #666;   /* Color al pasar el mouse */
+}
+
+/* Estilo para el título de la lista de estudiantes */
+.title-label {
+    -fx-text-fill: white;        /* Color del texto en blanco */
+    -fx-font-size: 24px;        /* Tamaño de fuente más grande */
+    -fx-font-weight: bold;      /* Negrita opcional */
+    -fx-padding: 10px;          /* Espaciado interno (opcional) */
+}
+
